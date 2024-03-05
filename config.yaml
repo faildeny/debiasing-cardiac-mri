@@ -1,0 +1,81 @@
+# Config file for the experiment
+
+# experiment_name: "real_only_prevalence_0.25_balanced"
+experiment_name: "synth_only"
+
+params:
+  max_epochs: 10
+  batch_size: 64
+  model: "resnet18"
+  # model: "densenet121"
+  # model: "resnet3D"
+  # model: "resnet(2+1)D"
+  # model: "swin3d_t"
+  # model: "mc3"
+  learning_rate: 0.0001
+  weight_decay: null
+  early_layers_tuning: False
+  fine_tuning: False
+  gray2rgb: True
+  standardize_histograms: False
+  mask_images: False
+
+  video: True
+  volume: False
+  edes: True
+
+  # video: False
+  # volume: True
+
+  input_size: 120
+  time_step: 4 # skip every nth frame to reduce the number of frames
+  central_slice_only: True # if True, only the central slice is used for training # deprecated
+  slice_neighbourhood: 1 # will use the neighoburhood of the central slice (both spatially and temporally) to augment the number of training samples
+
+  seed: 42
+  n_splits: 5
+  fold: 0
+  n_repeats: 8
+  saved_split: True
+  
+
+dataset:
+  train_prevalence: 0.25
+  val_prevalence: 0.1
+  test_prevalence: 0.01
+
+  balance_by_sensitive_features: True
+
+  # icd_code: "I50"
+  # icd_code: "C09_HF"
+  icd_code: 
+   - "C09_HF"
+  #  - "C01_IHD"
+  #  - "C02_MI"
+  #  - "C04_AF"
+  #  - "R03_High_cholesterol"
+  #  - "R01_Hypertension"
+
+  # icd_code: "HF"
+  # view: "la_4ch"
+  view: "sa"
+  # name: "MnM"
+  name: "UKBB"
+  load_masks: True
+  UKBB:
+    # csv file with patient's metadata including sex, bmi, age, and diagnosis
+    dataset_file: "data/ukbb_dataset.csv"
+
+  use_real: True # if False, the real data will be used solely for validation and testing
+  use_synthetic: False
+  synthetic_path: "/path/to/synthetic/dataset/"
+  synthetic_samples_to_load: 10000
+
+use_torchio: True
+
+num_workers: 20
+cache_data: True
+cache_path: "cache/sa_edes/"
+
+# debug: False # if True, only use 10 samples for training and validation
+debug: False
