@@ -50,7 +50,7 @@ python gradio_mask2image.py
 In this application, cardiac masks are stacked as RGB images, thus the raw output from the model is an RGB image as well. Two columns on the right display unstacked ED and ES frames.
 
 
-# Dwonstream task: Classification model training
+# Downstream task: Classification model training
 
 The framework allows to train classification models using different cardiac MRI inputs
 
