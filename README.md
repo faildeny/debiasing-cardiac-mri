@@ -1,5 +1,7 @@
-# Debiasing Cardiac Imaging Datasets with Controlled Latent Diffusion Models
-Code repository for paper: Debiasing Cardiac Imaging Datasets with Controlled Latent Diffusion Models
+# Debiasing Cardiac Imaging with Controlled Latent Diffusion Models
+Code repository for paper: Debiasing Cardiac Imaging with Controlled Latent Diffusion Models [arxiv pre-print](https://arxiv.org/abs/2403.19508)
+
+*Please note that this codebase is still a Work in Progress and some parts may be missing.*
 
 ![img](figures/figure.png)
 
@@ -73,6 +75,8 @@ Each trained model is evaluated in terms of fairness with following metrics:
  - Equal Opportunity
 
 Also, each sensitive subgroup is evaluated independently with standard performance metrics.
+
+In the paper, we focus on Balanced Accuracy metric computed for each subpopulation.
 
 Fairness metrics are provided by `fairlearn` library.
 
