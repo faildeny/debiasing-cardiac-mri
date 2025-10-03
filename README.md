@@ -3,7 +3,6 @@ Code repository for paper: Fairness-Aware Data Augmentation for Cardiac MRI usin
 
 Update: Paper accepted at the Fairness of AI in Medical Imaging workshop at MICCAI 2025 conference.
 
-*Please note that this codebase is still a Work in Progress and some parts may be missing.*
 
 ![img](figures/figure.png)
 
