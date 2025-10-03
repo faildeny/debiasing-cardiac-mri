@@ -1,5 +1,7 @@
-# Debiasing Cardiac Imaging with Controlled Latent Diffusion Models
-Code repository for paper: Debiasing Cardiac Imaging with Controlled Latent Diffusion Models [arxiv pre-print](https://arxiv.org/abs/2403.19508)
+# Fairness-Aware Data Augmentation for Cardiac MRI using Text-Conditioned Diffusion Models
+Code repository for paper: Fairness-Aware Data Augmentation for Cardiac MRI using Text-Conditioned Diffusion Models [arxiv pre-print](https://arxiv.org/abs/2403.19508)
+
+Update: Paper accepted at the Fairness of AI in Medical Imaging workshop at MICCAI 2025 conference.
 
 *Please note that this codebase is still a Work in Progress and some parts may be missing.*
 
