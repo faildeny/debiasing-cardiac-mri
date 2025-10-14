@@ -27,7 +27,13 @@ This work explores how **text-conditioned diffusion models** can help **reduce b
 ✨ **Key Takeaways:**
 - 🧍‍♀️🧍‍♂️ Traditional sampling strategies had **limited effect** on fairness.  
 - 💨 **Diffusion-based augmentation** improved **performance across diverse subgroups**, especially for underrepresented patients.  
-- ⚖️ Achieved **higher balanced accuracy** and **lower bias** across sex, age, and BMI.  
+- ⚖️ Achieved **higher balanced accuracy** and **lower bias** across sex, age, and BMI.
+
+---
+
+**Synthetic images conditioned on BMI**
+![img](figures/synthetic_figures.png)
+
 
 ---
 
