@@ -1,14 +1,38 @@
 # Fairness-Aware Data Augmentation for Cardiac MRI using Text-Conditioned Diffusion Models
-Code repository for paper: Fairness-Aware Data Augmentation for Cardiac MRI using Text-Conditioned Diffusion Models [arxiv pre-print](https://arxiv.org/abs/2403.19508)
+[![Paper](https://img.shields.io/badge/arXiv-2403.19508-b31b1b.svg)](https://arxiv.org/abs/2403.19508)
+[![Conference](https://img.shields.io/badge/MICCAI_2025-FAIMI_Workshop-4A90E2?logo=miccai)](#)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)](#)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](#)
 
-Update: Paper accepted at the Fairness of AI in Medical Imaging workshop at MICCAI 2025 conference.
+🎉 **Update:** Paper accepted at the **Fairness of AI in Medical Imaging Workshop @ MICCAI 2025**!
+
+> [Skorupko, G., Osuala, R., Szafranowska, Z., Kushibar, K., Dang, V. N., Aung, N., ... & Gkontra, P. (2025, September). Fairness-Aware Data Augmentation for Cardiac MRI Using Text-Conditioned Diffusion Models. In MICCAI Workshop on Fairness of AI in Medical Imaging (pp. 63-73). Cham: Springer Nature Switzerland.](https://link.springer.com/chapter/10.1007/978-3-032-05870-6_7)
 
 
 ![img](figures/figure.png)
 
-Diffusion model training is based on a very well documented [ControlNet](https://github.com/lllyasviel/ControlNet) repo. 
 
-## Setup
+---
+
+## 🚀 Overview  
+
+This work explores how **text-conditioned diffusion models** can help **reduce bias** and **tackle data scarcity** in cardiac MRI–based **heart failure prediction**.  
+
+🧩 We focus on **fairness-aware synthetic data generation**, where diffusion models help balance underrepresented subgroups across **sex**, **age**, and **BMI**.
+
+---
+
+## 🧠 Major Findings  
+
+✨ **Key Takeaways:**
+- 🧍‍♀️🧍‍♂️ Traditional sampling strategies had **limited effect** on fairness.  
+- 💨 **Diffusion-based augmentation** improved **performance across diverse subgroups**, especially for underrepresented patients.  
+- ⚖️ Achieved **higher balanced accuracy** and **lower bias** across sex, age, and BMI.  
+
+---
+
+## ⚙️ Setup  
+
 Create a new conda environment with
 ```
 conda env create -f environment.yaml
@@ -16,6 +40,7 @@ conda activate debiasing-cardiac-mri
 ```
 
 ## ControlNet model training
+Diffusion model training is based on a very well documented [ControlNet](https://github.com/lllyasviel/ControlNet) repo. 
 
 Before training, ensure that the pretrained Stable diffusion 2.1 model is downloaded: 
 ["v2-1_512-ema-pruned.ckpt"](https://huggingface.co/stabilityai/stable-diffusion-2-1-base/tree/main)
@@ -123,3 +148,21 @@ To run the k-fold cross-validation training, use the kfold.sh script. You need t
 # Configuration
 
 You can adjust the parameters of the experiment in the `config.yaml` file. The parameters include the number of epochs, batch size, learning rate, and model type, among others.
+
+# Citation
+
+If you find the paper or repository helpful please cite our work:
+> [Skorupko, G., Osuala, R., Szafranowska, Z., Kushibar, K., Dang, V. N., Aung, N., ... & Gkontra, P. (2025, September). Fairness-Aware Data Augmentation for Cardiac MRI Using Text-Conditioned Diffusion Models. In MICCAI Workshop on Fairness of AI in Medical Imaging (pp. 63-73). Cham: Springer Nature Switzerland.](https://link.springer.com/chapter/10.1007/978-3-032-05870-6_7)
+
+```bibtex
+@inproceedings{skorupko2025fairness,
+  title={Fairness-Aware Data Augmentation for Cardiac MRI Using Text-Conditioned Diffusion Models},
+  author={Skorupko, Grzegorz and Osuala, Richard and Szafranowska, Zuzanna and Kushibar, Kaisar and Dang, Vien Ngoc and Aung, Nay and Petersen, Steffen E and Lekadir, Karim and Gkontra, Polyxeni},
+  booktitle={MICCAI Workshop on Fairness of AI in Medical Imaging},
+  pages={63--73},
+  year={2025},
+  organization={Springer}
+}
+```
+
+
